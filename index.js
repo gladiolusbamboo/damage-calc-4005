@@ -1,7 +1,7 @@
 'use strict';
 
 /**
- * 攻撃力が防御力や防御力貫通によってどのようなダメージになるのかを計算する関数
+ * ダメージが防御力や防御力貫通によってどのようなダメージになるのかを計算する関数
  * 
  * 負の入力値があった場合には0として扱い、2000以上の入力値は2000として扱う。
  * 実効防御力は、防御力 - 防御力貫通 で定義され、
@@ -16,7 +16,9 @@
  */
 function effectiveDamage(power, armor, armorPenetration) {
   let effectiveArmor = normalize(armor) - normalize(armorPenetration);
-  effectiveArmor = effectiveArmor <= 0 ? 0 : effectiveArmor;
+  if (effectiveArmor <= 0) {
+    effectiveArmor = 0;
+  }
   const damageDecrease = effectiveArmor / (100 + effectiveArmor);
   return Math.round(normalize(power) * (1 - damageDecrease));
 }
