@@ -1,5 +1,3 @@
-[![CircleCI](https://circleci.com/gh/gladiolusbamboo/damage-calc-4005/tree/master-2017.svg?style=svg)](https://circleci.com/gh/gladiolusbamboo/damage-calc-4005/tree/master-2017)
-
 # damage-calc
 [![CircleCI](https://circleci.com/gh/gladiolusbamboo/damage-calc-4005.svg?style=svg)](https://circleci.com/gh/gladiolusbamboo/damage-calc-4005)
 
